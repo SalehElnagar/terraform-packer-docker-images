@@ -1,0 +1,20 @@
+{
+  "observed_on": "2026-09-27 America/Toronto",
+  "kind": "Sanitized excerpts from captured stdout; not a new execution",
+  "terraform": {
+    "sources": {
+      "terraform-baseline.log": "7f70ae15ae857e77c85db038e607dd42edfc28e63402d91a992a5a747101c51a",
+      "terraform-update.log": "2c0a4329ab8f6ea01f650b5890bef24d3b7ae0a9ac2c9e1c4d604899070f9602"
+    },
+    "transform": "Added editorial section labels; replaced local resource IDs with redacted. Kept all original output lines."
+  },
+  "packer": {
+    "source_sha256": "f03ca6cf40f4d78377f4ba83c9d17160c8472d0216b82e36ed68be41d327e0f7",
+    "transform": "Selected build-stage, completion and tagged-artifact lines in original order. Replaced temporary script paths and shortened the app path. Other lines omitted."
+  },
+  "limits": [
+    "These outputs establish local build/apply completion only.",
+    "Runtime behavior is checked separately in the recorded verification reports.",
+    "No remote registry push occurred."
+  ]
+}

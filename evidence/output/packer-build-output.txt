@@ -1,0 +1,14 @@
+Recorded Packer output | local run: 27 September 2026
+Selected lines. Local paths shortened; IDs and pull progress omitted.
+
+==> docker.site: Pulling Docker image: python:3.13-alpine
+==> docker.site: Starting docker container...
+==> docker.site: Provisioning with shell script: [temporary path omitted]
+==> docker.site: Uploading app/index.html => /site/index.html
+==> docker.site: Provisioning with shell script: [temporary path omitted]
+==> docker.site: Committing the container
+==> docker.site: Running post-processor:  (type docker-tag)
+==> docker.site (docker-tag): Repository: mvp-image-lab-packer:demo
+Build 'docker.site' finished after 2 seconds 690 milliseconds.
+==> Builds finished. The artifacts of successful builds are:
+--> docker.site: Imported Docker image: mvp-image-lab-packer:demo with tags mvp-image-lab-packer:demo

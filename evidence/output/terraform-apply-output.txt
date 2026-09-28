@@ -1,0 +1,22 @@
+Recorded Terraform output | local run: 27 September 2026
+Local resource IDs redacted. No output lines omitted.
+
+BASELINE APPLY
+docker_image.app: Creating...
+docker_image.app: Creation complete after 3s [id=redacted]
+docker_container.app: Creating...
+docker_container.app: Creation complete after 0s [id=redacted]
+
+Apply complete! Resources: 2 added, 0 changed, 0 destroyed.
+
+REBUILD AFTER HTML EDIT
+docker_container.app: Destroying... [id=redacted]
+docker_container.app: Destruction complete after 0s
+docker_image.app: Destroying... [id=redacted]
+docker_image.app: Destruction complete after 1s
+docker_image.app: Creating...
+docker_image.app: Creation complete after 0s [id=redacted]
+docker_container.app: Creating...
+docker_container.app: Creation complete after 1s [id=redacted]
+
+Apply complete! Resources: 2 added, 0 changed, 2 destroyed.
