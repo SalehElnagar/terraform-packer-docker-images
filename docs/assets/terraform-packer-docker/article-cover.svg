@@ -69,8 +69,8 @@ text { font-family: Arial, Helvetica, sans-serif; }
           <title>Terraform · Provider + file triggers · Architecture component · Terraform</title>
           <rect x="24" y="40" width="210" height="84" rx="6" class="c-mask"/>
           <rect x="24" y="40" width="210" height="84" rx="6" class="c-backend" stroke-width="1.5"/>
-          
-          
+
+
           <text data-detail-anchor="true" x="129" y="80" class="t-primary" font-size="11" font-weight="600" text-anchor="middle">Terraform</text>
         <text data-detail="context" x="129" y="96" class="t-muted" font-size="9" text-anchor="middle">Provider + file triggers</text>
         </g>
@@ -79,8 +79,8 @@ text { font-family: Arial, Helvetica, sans-serif; }
           <title>Docker build · Dockerfile + HTML · Architecture component · Docker</title>
           <rect x="310" y="40" width="210" height="84" rx="6" class="c-mask"/>
           <rect x="310" y="40" width="210" height="84" rx="6" class="c-backend" stroke-width="1.5"/>
-          
-          
+
+
           <text data-detail-anchor="true" x="415" y="80" class="t-primary" font-size="11" font-weight="600" text-anchor="middle">Docker build</text>
         <text data-detail="context" x="415" y="96" class="t-muted" font-size="9" text-anchor="middle">Dockerfile + HTML</text>
         </g>
@@ -89,7 +89,7 @@ text { font-family: Arial, Helvetica, sans-serif; }
           <title>Local image · Build output · Architecture component</title>
           <rect x="596" y="40" width="210" height="84" rx="6" class="c-mask"/>
           <rect x="596" y="40" width="210" height="84" rx="6" class="c-database" stroke-width="1.5"/>
-          
+
           <text data-detail-anchor="true" x="701" y="80" class="t-primary" font-size="11" font-weight="600" text-anchor="middle">Local image</text>
         <text data-detail="context" x="701" y="96" class="t-muted" font-size="9" text-anchor="middle">Build output</text>
         </g>
@@ -98,7 +98,7 @@ text { font-family: Arial, Helvetica, sans-serif; }
           <title>Container · image_id dependency · Architecture component</title>
           <rect x="882" y="40" width="210" height="84" rx="6" class="c-mask"/>
           <rect x="882" y="40" width="210" height="84" rx="6" class="c-frontend" stroke-width="1.5"/>
-          
+
           <text data-detail-anchor="true" x="987" y="80" class="t-primary" font-size="11" font-weight="600" text-anchor="middle">Container</text>
         <text data-detail="context" x="987" y="96" class="t-muted" font-size="9" text-anchor="middle">image_id dependency</text>
         </g>
@@ -107,7 +107,7 @@ text { font-family: Arial, Helvetica, sans-serif; }
           <title>Packer · HCL template · Architecture component</title>
           <rect x="24" y="216" width="210" height="84" rx="6" class="c-mask"/>
           <rect x="24" y="216" width="210" height="84" rx="6" class="c-backend" stroke-width="1.5"/>
-          
+
           <text data-detail-anchor="true" x="129" y="256" class="t-primary" font-size="11" font-weight="600" text-anchor="middle">Packer</text>
         <text data-detail="context" x="129" y="272" class="t-muted" font-size="9" text-anchor="middle">HCL template</text>
         </g>
@@ -116,7 +116,7 @@ text { font-family: Arial, Helvetica, sans-serif; }
           <title>Provision + commit · Temporary container · Architecture component</title>
           <rect x="310" y="216" width="210" height="84" rx="6" class="c-mask"/>
           <rect x="310" y="216" width="210" height="84" rx="6" class="c-backend" stroke-width="1.5"/>
-          
+
           <text data-detail-anchor="true" x="415" y="256" class="t-primary" font-size="11" font-weight="600" text-anchor="middle">Provision + commit</text>
         <text data-detail="context" x="415" y="272" class="t-muted" font-size="9" text-anchor="middle">Temporary container</text>
         </g>
@@ -125,7 +125,7 @@ text { font-family: Arial, Helvetica, sans-serif; }
           <title>Tagged image · docker-tag · Architecture component</title>
           <rect x="596" y="216" width="210" height="84" rx="6" class="c-mask"/>
           <rect x="596" y="216" width="210" height="84" rx="6" class="c-database" stroke-width="1.5"/>
-          
+
           <text data-detail-anchor="true" x="701" y="256" class="t-primary" font-size="11" font-weight="600" text-anchor="middle">Tagged image</text>
         <text data-detail="context" x="701" y="272" class="t-muted" font-size="9" text-anchor="middle">docker-tag</text>
         </g>
@@ -134,7 +134,7 @@ text { font-family: Arial, Helvetica, sans-serif; }
           <title>Container · Separate docker run · Architecture component</title>
           <rect x="882" y="216" width="210" height="84" rx="6" class="c-mask"/>
           <rect x="882" y="216" width="210" height="84" rx="6" class="c-frontend" stroke-width="1.5"/>
-          
+
           <text data-detail-anchor="true" x="987" y="256" class="t-primary" font-size="11" font-weight="600" text-anchor="middle">Container</text>
         <text data-detail="context" x="987" y="272" class="t-muted" font-size="9" text-anchor="middle">Separate docker run</text>
         </g>
