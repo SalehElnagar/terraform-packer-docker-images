@@ -1,0 +1,11 @@
+{
+  "observed_at": "2026-09-28T02:16:17.881381+00:00",
+  "case": "packer-initial-runtime-failure",
+  "build_succeeded": true,
+  "container_exit_code": 2,
+  "actual_entrypoint": [
+    "/bin/sh"
+  ],
+  "error": "/bin/sh: can't open 'python': No such file or directory",
+  "repair": "Set an explicit Python entrypoint and remove python from CMD"
+}

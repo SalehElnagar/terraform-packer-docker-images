@@ -1,0 +1,13 @@
+{
+  "observed_at": "2026-09-28T02:13:47.911662+00:00",
+  "case": "terraform-baseline",
+  "http_status": 200,
+  "page_version": "one",
+  "image_config_id": "sha256:f54d33ddcee57d9b0696e105bfae1fda9dfea01ee1658356442341adeef703d3",
+  "user": "10001:10001",
+  "read_only_root": true,
+  "all_capabilities_dropped": true,
+  "no_new_privileges": true,
+  "port_scope": "loopback",
+  "bind_mounts": false
+}

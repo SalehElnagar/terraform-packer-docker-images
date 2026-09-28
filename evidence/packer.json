@@ -1,0 +1,17 @@
+{
+  "observed_at": "2026-09-28T02:17:13.352622+00:00",
+  "case": "packer-build-and-http",
+  "http_status": 200,
+  "page_version": "one",
+  "image_config_id": "sha256:5510d3e6f4e76a406e50f1dfb893ec7218031dcc5ef942f009ce8ac58c060895",
+  "user": "10001:10001",
+  "entrypoint": [
+    "python"
+  ],
+  "command_verified": true,
+  "read_only_root": true,
+  "port_scope": "loopback",
+  "bind_mounts": false,
+  "all_capabilities_dropped": true,
+  "no_new_privileges": true
+}

@@ -1,0 +1,8 @@
+{
+  "observed_at": "2026-09-28T02:17:51.128030+00:00",
+  "case": "terraform-rebuild",
+  "http_status": 200,
+  "page_version": "two",
+  "image_changed": true,
+  "image_config_id": "sha256:4136f679b241808cb86696f7aa0762c2d6a666bb25f5ebe8b93c47420d0522f4"
+}

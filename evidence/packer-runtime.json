@@ -1,0 +1,18 @@
+{
+  "observed_at": "2026-09-28T02:19:34.856688+00:00",
+  "checks": {
+    "http_200": true,
+    "response_matches_source": true,
+    "running": true,
+    "non_root_user": true,
+    "expected_process": true,
+    "read_only_root": true,
+    "all_capabilities_dropped": true,
+    "no_new_privileges": true,
+    "no_mounts": true,
+    "only_loopback_port": true
+  },
+  "source_sha256": "7645ba414a284b9193a033166da787a056fe3daa2355e0798165487010113c01",
+  "image_config_id": "sha256:5510d3e6f4e76a406e50f1dfb893ec7218031dcc5ef942f009ce8ac58c060895",
+  "all_passed": true
+}

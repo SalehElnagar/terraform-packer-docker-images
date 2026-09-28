@@ -1,0 +1,141 @@
+{
+  "schema_version": 1,
+  "diagram_type": "workflow",
+  "meta": {
+    "title": "Two routes to a Docker image",
+    "quality_profile": "showcase",
+    "legend": {
+      "mode": "hidden"
+    },
+    "viewBox": [
+      720,
+      300
+    ]
+  },
+  "lanes": [
+    {
+      "id": "terraform",
+      "label": "Terraform route"
+    },
+    {
+      "id": "packer",
+      "label": "Packer route"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "recipe",
+      "lane": "terraform",
+      "col": 0,
+      "type": "frontend",
+      "label": "Dockerfile",
+      "sublabel": "HTML + build context"
+    },
+    {
+      "id": "provider",
+      "lane": "terraform",
+      "col": 1,
+      "type": "backend",
+      "label": "Provider",
+      "sublabel": "Docker API"
+    },
+    {
+      "id": "builder",
+      "lane": "terraform",
+      "col": 3,
+      "type": "backend",
+      "label": "Docker build",
+      "sublabel": "Execute the recipe"
+    },
+    {
+      "id": "tfimage",
+      "lane": "terraform",
+      "col": 5,
+      "type": "database",
+      "label": "Local image",
+      "sublabel": "Consumer uses image_id"
+    },
+    {
+      "id": "base",
+      "lane": "packer",
+      "col": 0,
+      "type": "frontend",
+      "label": "Base image",
+      "sublabel": "Packer Docker source"
+    },
+    {
+      "id": "temporary",
+      "lane": "packer",
+      "col": 1,
+      "type": "backend",
+      "label": "Container",
+      "sublabel": "Provision files"
+    },
+    {
+      "id": "commit",
+      "lane": "packer",
+      "col": 3,
+      "type": "backend",
+      "label": "Commit image",
+      "sublabel": "Packer requests capture"
+    },
+    {
+      "id": "pkimage",
+      "lane": "packer",
+      "col": 5,
+      "type": "database",
+      "label": "Tagged image",
+      "sublabel": "Separate run lifecycle"
+    }
+  ],
+  "edges": [
+    {
+      "from": "recipe",
+      "to": "provider"
+    },
+    {
+      "from": "provider",
+      "to": "builder"
+    },
+    {
+      "from": "builder",
+      "to": "tfimage"
+    },
+    {
+      "from": "base",
+      "to": "temporary"
+    },
+    {
+      "from": "temporary",
+      "to": "commit"
+    },
+    {
+      "from": "commit",
+      "to": "pkimage"
+    }
+  ],
+  "mainPath": [
+    "recipe",
+    "provider",
+    "builder",
+    "tfimage"
+  ],
+  "cards": [
+    {
+      "dot": "violet",
+      "title": "Terraform",
+      "items": [
+        "The provider invokes Docker operations.",
+        "File hashes can trigger a rebuild."
+      ]
+    },
+    {
+      "dot": "cyan",
+      "title": "Packer",
+      "items": [
+        "Provisioners prepare a temporary container.",
+        "Image creation ends at an artifact."
+      ]
+    }
+  ]
+}

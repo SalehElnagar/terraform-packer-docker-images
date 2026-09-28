@@ -1,0 +1,121 @@
+{
+  "schema_version": 1,
+  "diagram_type": "workflow",
+  "meta": {
+    "title": "Build an artifact. Deploy its identity.",
+    "quality_profile": "showcase",
+    "legend": {
+      "mode": "hidden"
+    },
+    "viewBox": [
+      720,
+      300
+    ]
+  },
+  "lanes": [
+    {
+      "id": "release",
+      "label": "Application release"
+    },
+    {
+      "id": "platform",
+      "label": "Platform resources"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "build",
+      "lane": "release",
+      "col": 0,
+      "type": "backend",
+      "label": "Build + test",
+      "sublabel": "Controlled inputs"
+    },
+    {
+      "id": "registry",
+      "lane": "release",
+      "col": 1,
+      "type": "database",
+      "label": "Registry",
+      "sublabel": "Retain accepted image"
+    },
+    {
+      "id": "release",
+      "lane": "release",
+      "col": 3,
+      "type": "security",
+      "label": "Deployment",
+      "sublabel": "Select digest"
+    },
+    {
+      "id": "runtime",
+      "lane": "release",
+      "col": 5,
+      "type": "cloud",
+      "label": "Runtime",
+      "sublabel": "Run + observe"
+    },
+    {
+      "id": "infra",
+      "lane": "platform",
+      "col": 3,
+      "type": "backend",
+      "label": "Terraform",
+      "sublabel": "Provision resources"
+    },
+    {
+      "id": "foundation",
+      "lane": "platform",
+      "col": 5,
+      "type": "cloud",
+      "label": "Platform",
+      "sublabel": "Managed environment"
+    }
+  ],
+  "edges": [
+    {
+      "from": "build",
+      "to": "registry"
+    },
+    {
+      "from": "registry",
+      "to": "release"
+    },
+    {
+      "from": "release",
+      "to": "runtime"
+    },
+    {
+      "from": "infra",
+      "to": "foundation"
+    },
+    {
+      "from": "foundation",
+      "to": "runtime"
+    }
+  ],
+  "mainPath": [
+    "build",
+    "registry",
+    "release",
+    "runtime"
+  ],
+  "cards": [
+    {
+      "dot": "emerald",
+      "title": "Artifact handoff",
+      "items": [
+        "Promote the image that passed verification.",
+        "A digest identifies bytes; it does not certify safety."
+      ]
+    },
+    {
+      "dot": "amber",
+      "title": "Ownership",
+      "items": [
+        "One workflow owns each deployment setting.",
+        "This is a proposed architecture, not a live result."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "observed_on": "2026-09-27 America/Toronto",
+  "recorded_at": "2026-09-28T02:21:57.963470+00:00",
+  "scope": "Local Docker Desktop Linux-container lab; no Azure deployment or registry push",
+  "tools": {
+    "terraform": "1.14.7",
+    "docker_provider": "4.6.0",
+    "packer": "1.14.3",
+    "packer_docker_plugin": "1.1.4",
+    "docker_client": "29.4.3",
+    "docker_server": "29.6.2",
+    "buildkit": "0.31.2"
+  },
+  "source_sha256": {
+    "Makefile": "ec8283b33ea1d6c8715cc0e364dd72f2d050b95bd28a3bd18aa452e72f9f33b0",
+    "README.md": "5e6e78982387b88f2777523a74540eb3ba3962ddf472448e029a4756c575c8a9",
+    ".gitignore": "8d149502f8000af3f806f0f7eb51d4008783b8d1a8e356e041f43f00de410b4f",
+    "terraform/main.tf": "ab45e8fdbdfc59cd44324e902a99622f9a279913a2141a4b000a534650d2b34a",
+    "terraform/.terraform.lock.hcl": "a3893e56165637ee1a2fe9ed6dec9cee8332ae32312532455fc84283a971f99c",
+    "app/index.html": "7645ba414a284b9193a033166da787a056fe3daa2355e0798165487010113c01",
+    "app/Dockerfile": "a7968b5a39246ecb512da6400b9a5c21420822e20ca4cd70bae59895bbd4684d",
+    "app/.dockerignore": "f948b9709b546125d7ee35b1749f18cceab7651442841456ce8ab7aedcf961d6",
+    "scripts/verify-runtime.py": "2354a824148e537f028d3607ea78c8920c233d512c17b325c9103458c5e4a8be",
+    "packer/site.pkr.hcl": "4f3144becfdcdb441ef3b039e1f259d3f66f1cf2fa291d0ca89f542d701e5302",
+    "experiments/no-content-trigger/terraform/main.tf": "f4d1f1733a26023928ed6a3909b8120644eeecf86941222736cce3266a4b8a07",
+    "experiments/no-content-trigger/terraform/.terraform.lock.hcl": "a3893e56165637ee1a2fe9ed6dec9cee8332ae32312532455fc84283a971f99c",
+    "experiments/no-content-trigger/app/index.html": "7645ba414a284b9193a033166da787a056fe3daa2355e0798165487010113c01",
+    "experiments/no-content-trigger/app/Dockerfile": "a7968b5a39246ecb512da6400b9a5c21420822e20ca4cd70bae59895bbd4684d",
+    "experiments/no-content-trigger/app/.dockerignore": "f948b9709b546125d7ee35b1749f18cceab7651442841456ce8ab7aedcf961d6"
+  },
+  "screenshots": {
+    "source-edited-still-version-one.png": {
+      "sha256": "34e02a2c6c2c96e4e68e586d7b1bdb1f187f2afa3efc87744fc67e3bb835273d",
+      "capture": "Browser screenshot of the actual loopback HTTP application; no generated terminal output or synthetic success screen"
+    },
+    "terraform-version-one.png": {
+      "sha256": "34e02a2c6c2c96e4e68e586d7b1bdb1f187f2afa3efc87744fc67e3bb835273d",
+      "capture": "Browser screenshot of the actual loopback HTTP application; no generated terminal output or synthetic success screen"
+    },
+    "no-trigger-version-one.png": {
+      "sha256": "34e02a2c6c2c96e4e68e586d7b1bdb1f187f2afa3efc87744fc67e3bb835273d",
+      "capture": "Browser screenshot of the actual loopback HTTP application; no generated terminal output or synthetic success screen"
+    },
+    "terraform-version-two.png": {
+      "sha256": "1000a71d06ca40a0b5f7d27427b98b60af3f0a20ad55cac311dd45db2cde55f3",
+      "capture": "Browser screenshot of the actual loopback HTTP application; no generated terminal output or synthetic success screen"
+    },
+    "packer-version-one.png": {
+      "sha256": "34e02a2c6c2c96e4e68e586d7b1bdb1f187f2afa3efc87744fc67e3bb835273d",
+      "capture": "Browser screenshot of the actual loopback HTTP application; no generated terminal output or synthetic success screen"
+    }
+  },
+  "limitations": [
+    "Screenshots show HTTP content, not a security certification.",
+    "The JSON runtime checks establish only their explicit assertions.",
+    "The base-image tag is mutable; these runs are not a reproducible-build guarantee.",
+    "Packer initially built an image with a broken runtime entrypoint; the failed attempt is retained.",
+    "No cloud resources, hosted pipeline, registry push, or fleet behavior were tested."
+  ],
+  "verification": {
+    "make_validate": "passed",
+    "runtime_checks_each": 10,
+    "stale_source_negative_check": "failed as expected; nine other checks passed",
+    "screenshot_files": 5
+  }
+}

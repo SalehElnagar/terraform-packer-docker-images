@@ -1,0 +1,7 @@
+{
+  "observed_at": "2026-09-28T02:17:13.355324+00:00",
+  "case": "source-edit-before-build",
+  "source_version": "two",
+  "served_version": "one",
+  "http_status": 200
+}

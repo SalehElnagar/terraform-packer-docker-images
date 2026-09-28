@@ -1,0 +1,8 @@
+{
+  "observed_at": "2026-09-28T02:18:44.656329+00:00",
+  "case": "omitted-content-trigger",
+  "source_version": "two",
+  "served_version": "one",
+  "plan_actions": "no-op",
+  "http_status": 200
+}
