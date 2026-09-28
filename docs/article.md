@@ -1,5 +1,7 @@
 # Building Docker Images with Terraform and Packer: A Technical Walkthrough
 
+![Article cover: Terraform builds through Docker and manages its container; Packer provisions and commits a tagged image, with a separate run step.](assets/terraform-packer-docker/article-cover.png)
+
 “Wait… why is there a Docker image build in this Terraform configuration?”
 
 Imagine that question coming up during a code review. The reviewer expects networks, compute, and permissions. Instead, they find a `docker_image` resource with a `build` block. Then a Packer template appears, and another question follows: “Isn't Packer for VM images?”

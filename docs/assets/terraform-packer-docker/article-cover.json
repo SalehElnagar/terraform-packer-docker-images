@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "Building Docker images with Terraform and Packer",
+    "quality_profile": "showcase",
+    "legend": {"mode": "hidden"},
+    "viewBox": [1120, 340]
+  },
+  "components": [
+    {"id":"tf-control","type":"backend","brand":"terraform","label":"Terraform","sublabel":"Provider + file triggers","pos":[24,40],"size":[210,84]},
+    {"id":"tf-build","type":"backend","brand":"docker","label":"Docker build","sublabel":"Dockerfile + HTML","pos":[310,40],"size":[210,84]},
+    {"id":"tf-artifact","type":"database","label":"Local image","sublabel":"Build output","pos":[596,40],"size":[210,84]},
+    {"id":"tf-runtime","type":"frontend","label":"Container","sublabel":"image_id dependency","pos":[882,40],"size":[210,84]},
+    {"id":"pk-control","type":"backend","label":"Packer","sublabel":"HCL template","pos":[24,216],"size":[210,84]},
+    {"id":"pk-build","type":"backend","label":"Provision + commit","sublabel":"Temporary container","pos":[310,216],"size":[210,84]},
+    {"id":"pk-artifact","type":"database","label":"Tagged image","sublabel":"docker-tag","pos":[596,216],"size":[210,84]},
+    {"id":"pk-runtime","type":"frontend","label":"Container","sublabel":"Separate docker run","pos":[882,216],"size":[210,84]}
+  ],
+  "connections": [
+    {"id":"tf-call","from":"tf-control","to":"tf-build"},
+    {"id":"tf-result","from":"tf-build","to":"tf-artifact"},
+    {"id":"tf-consume","from":"tf-artifact","to":"tf-runtime"},
+    {"id":"pk-call","from":"pk-control","to":"pk-build"},
+    {"id":"pk-result","from":"pk-build","to":"pk-artifact"},
+    {"id":"pk-run","from":"pk-artifact","to":"pk-runtime","variant":"dashed"}
+  ]
+}
