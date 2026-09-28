@@ -56,3 +56,9 @@ process and settings that a page screenshot cannot establish.
 The captures are cropped browser screenshots, not generated examples or
 reconstructed terminal output. They show exactly the served page. They do not
 prove that every possible behavior works.
+
+## Runtime verification report
+
+![Ten runtime checks pass in the committed report.](screenshots/runtime-verification-report.png)
+
+Actual browser capture of the report generated against the running Terraform container.
