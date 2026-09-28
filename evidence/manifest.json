@@ -13,7 +13,7 @@
   },
   "source_sha256": {
     "Makefile": "ec8283b33ea1d6c8715cc0e364dd72f2d050b95bd28a3bd18aa452e72f9f33b0",
-    "README.md": "5e6e78982387b88f2777523a74540eb3ba3962ddf472448e029a4756c575c8a9",
+    "README.md": "1bdac9f927057b863b70181b193d1d4f3f02952d200d4908f898c27fb019a867",
     ".gitignore": "8d149502f8000af3f806f0f7eb51d4008783b8d1a8e356e041f43f00de410b4f",
     "terraform/main.tf": "ab45e8fdbdfc59cd44324e902a99622f9a279913a2141a4b000a534650d2b34a",
     "terraform/.terraform.lock.hcl": "a3893e56165637ee1a2fe9ed6dec9cee8332ae32312532455fc84283a971f99c",
@@ -32,66 +32,78 @@
     "source-edited-still-version-one.png": {
       "sha256": "34e02a2c6c2c96e4e68e586d7b1bdb1f187f2afa3efc87744fc67e3bb835273d",
       "capture": "Browser screenshot of the actual loopback HTTP application; no generated terminal output or synthetic success screen",
-      "publication_use": "archive; superseded in article after screenshot audit"
+      "publication_use": "archive; not an article figure"
     },
     "terraform-version-one.png": {
       "sha256": "34e02a2c6c2c96e4e68e586d7b1bdb1f187f2afa3efc87744fc67e3bb835273d",
       "capture": "Browser screenshot of the actual loopback HTTP application; no generated terminal output or synthetic success screen",
-      "publication_use": "archive; superseded in article after screenshot audit"
+      "publication_use": "archive; not an article figure"
     },
     "no-trigger-version-one.png": {
       "sha256": "34e02a2c6c2c96e4e68e586d7b1bdb1f187f2afa3efc87744fc67e3bb835273d",
       "capture": "Browser screenshot of the actual loopback HTTP application; no generated terminal output or synthetic success screen",
-      "publication_use": "archive; superseded in article after screenshot audit"
+      "publication_use": "archive; not an article figure"
     },
     "terraform-version-two.png": {
       "sha256": "1000a71d06ca40a0b5f7d27427b98b60af3f0a20ad55cac311dd45db2cde55f3",
       "capture": "Browser screenshot of the actual loopback HTTP application; no generated terminal output or synthetic success screen",
-      "publication_use": "archive; superseded in article after screenshot audit"
+      "publication_use": "archive; not an article figure"
     },
     "packer-version-one.png": {
       "sha256": "34e02a2c6c2c96e4e68e586d7b1bdb1f187f2afa3efc87744fc67e3bb835273d",
       "capture": "Browser screenshot of the actual loopback HTTP application; no generated terminal output or synthetic success screen",
-      "publication_use": "archive; superseded in article after screenshot audit"
+      "publication_use": "archive; not an article figure"
     },
     "runtime-verification-report.png": {
       "sha256": "56a53869f0146bea2e1d446670f551582e0508f70d1dbc6236a964e6f12b0fe2",
       "capture": "Actual browser screenshot of the committed live-runtime verification report at source commit 0ce5a1f; not a terminal screenshot",
-      "publication_use": "archive; superseded in article after screenshot audit"
+      "publication_use": "archive; not an article figure"
     },
     "terraform-baseline-report.jpg": {
       "sha256": "776a86b0ac44ee3509df4726e3f8dafe952beadd54907e591b2749f9ca3c93a5",
       "capture": "Actual browser screenshot of baseline.json at pinned commit 83a4f8805d4f5b7836446f0c4d7d3a7185bfcbe7; historical report view, not a fresh runtime capture",
       "format": "JPEG",
-      "publication_use": "article"
+      "publication_use": "archive; not an article figure"
     },
     "terraform-rebuild-report.jpg": {
       "sha256": "25a0e6eddc8a960e98b6daf0b58633a84533babcab6a66c091d808f313bd7b9a",
       "capture": "Actual browser screenshot of rebuild.json at pinned commit 83a4f8805d4f5b7836446f0c4d7d3a7185bfcbe7; historical report view, not a fresh runtime capture",
       "format": "JPEG",
-      "publication_use": "article"
+      "publication_use": "archive; not an article figure"
     },
     "omitted-trigger-report.jpg": {
       "sha256": "cb920af708d078cc391909688c06781ded4f2d7115b9a6ff060fa5c0ec6d8fa8",
       "capture": "Actual browser screenshot of no-trigger.json at pinned commit 83a4f8805d4f5b7836446f0c4d7d3a7185bfcbe7; historical report view, not a fresh runtime capture",
       "format": "JPEG",
-      "publication_use": "article"
+      "publication_use": "archive; not an article figure"
     },
     "packer-runtime-report.jpg": {
       "sha256": "706f3876a15d7912dfcef50b0970a9fe7ef4c54d3b81e757fa5f3f703b3b8305",
       "capture": "Actual browser screenshot of packer.json at pinned commit 83a4f8805d4f5b7836446f0c4d7d3a7185bfcbe7; historical report view, not a fresh runtime capture",
       "format": "JPEG",
-      "publication_use": "article"
+      "publication_use": "archive; not an article figure"
     },
     "runtime-checks-report.jpg": {
       "sha256": "9acc26f870ead18a0ae40ce651ce976b97f3155a34c8e06dc8b2ee11cd6d6da1",
       "capture": "Actual browser screenshot of terraform-runtime.json at pinned commit 83a4f8805d4f5b7836446f0c4d7d3a7185bfcbe7; historical report view, not a fresh runtime capture",
       "format": "JPEG",
+      "publication_use": "archive; not an article figure"
+    },
+    "terraform-apply-output.jpg": {
+      "sha256": "d285c9cae1269dca99b4d75f598aba86e4c78952db938a38ec84a5cf8674f961",
+      "capture": "Actual browser screenshot of sanitized recorded tool output at commit 5d995eb7265bd59e88bd7cf5917a0a080a9590bf",
+      "format": "JPEG",
+      "publication_use": "article"
+    },
+    "packer-build-output.jpg": {
+      "sha256": "166f2892cb94aebe60588ba6a28bbc180aad4a3dd6a11c8cef26c35cd437c7d0",
+      "capture": "Actual browser screenshot of sanitized recorded tool output at commit 5d995eb7265bd59e88bd7cf5917a0a080a9590bf",
+      "format": "JPEG",
       "publication_use": "article"
     }
   },
   "limitations": [
-    "Screenshots show HTTP content, not a security certification.",
+    "Current article screenshots show recorded tool completion; runtime checks are separate. Archived page captures only show served content.",
     "The JSON runtime checks establish only their explicit assertions.",
     "The base-image tag is mutable; these runs are not a reproducible-build guarantee.",
     "Packer initially built an image with a broken runtime entrypoint; the failed attempt is retained.",
@@ -101,6 +113,6 @@
     "make_validate": "passed",
     "runtime_checks_each": 10,
     "stale_source_negative_check": "failed as expected; nine other checks passed",
-    "screenshot_files": 11
+    "screenshot_files": 13
   }
 }

@@ -17,23 +17,30 @@ The JSON files contain selected, sanitized observations rather than raw Docker
 inspect output, Terraform state, plans, or build logs. Image configuration IDs
 identify local image configurations; they are not registry manifest digests.
 
-## Screenshot audit and current article figures
+## Article screenshots: actual tool output
 
-The original page crops below are retained as historical evidence. Their missing
-endpoint context made the version-one cases visually indistinguishable, and the
-old report crop was incomplete. They have been replaced in the article by the
-following complete report captures. These are screenshots of saved observations,
-not fresh terminal or runtime screenshots. No builds were rerun for this audit.
+The article uses two browser screenshots of sanitized output captured during the
+original local execution. The complete selected text is available beside each
+image. These are GitHub views of recorded stdout, not newly executed terminal
+sessions. No build or apply was repeated to make these screenshots.
 
-![Complete baseline.json report.](screenshots/terraform-baseline-report.jpg)
+![Terraform creates the baseline and replaces both resources after the HTML edit.](screenshots/terraform-apply-output.jpg)
 
-![Complete rebuild.json report.](screenshots/terraform-rebuild-report.jpg)
+[Terraform output](output/terraform-apply-output.txt): all original output lines
+from the baseline and rebuild apply, with local resource IDs redacted and two
+editorial section headings added.
 
-![Complete no-trigger.json report.](screenshots/omitted-trigger-report.jpg)
+![Packer provisions the page, commits the image, and creates its local tag.](screenshots/packer-build-output.jpg)
 
-![Complete packer.json report.](screenshots/packer-runtime-report.jpg)
+[Packer output](output/packer-build-output.txt): selected lines in original order;
+temporary paths shortened and IDs and pull progress omitted. The tag is local.
+It is not evidence of a registry push.
 
-![Complete terraform-runtime.json report.](screenshots/runtime-checks-report.jpg)
+[Provenance](output/provenance.json) records the source-log hashes and exact
+editing rules. [Screenshot audit](screenshot-audit.json) records the capture
+revision and hashes. The older JSON screenshots remain in `screenshots/` for
+history, but are no longer article figures. Runtime assertions remain in the
+JSON files as supporting evidence.
 
 ## Archived original browser captures
 

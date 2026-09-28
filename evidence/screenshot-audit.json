@@ -54,5 +54,16 @@
       "height": 688,
       "review": "Filename, complete fields, final closing brace, and recorded timestamp inspected."
     }
-  ]
+  ],
+  "current_article_revision": {
+    "recorded_at": "2026-09-28T03:39:23.607001+00:00",
+    "request": "Replace low-value JSON screenshots with Terraform and Packer output.",
+    "source_commit": "5d995eb7265bd59e88bd7cf5917a0a080a9590bf",
+    "figures": [
+      "terraform-apply-output.jpg",
+      "packer-build-output.jpg"
+    ],
+    "review": "Both screenshots visually inspected: filename and pinned commit visible, all intended output lines and completion results readable, no clipped line endings.",
+    "limits": "Recorded stdout shown in GitHub; no new apply/build and no registry push. Older replacements above are historical."
+  }
 }
