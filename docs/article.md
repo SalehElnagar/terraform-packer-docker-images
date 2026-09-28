@@ -8,7 +8,7 @@ Both questions deserve a technical answer. Terraform's Docker provider can initi
 
 We will use one small web page to examine the two implementations, the dependency between an image and its container, and the source changes that should cause a rebuild. Then we will separate what is convenient for a local lab from what belongs in an application delivery pipeline.
 
-**Evidence scope:** the local Docker demonstrations below were executed on 27 September 2026. The screenshots show the actual HTTP responses. Separate runtime checks verified process and container settings. The Azure section is a proposed architecture, not a deployed result.
+**Evidence scope:** the local Docker demonstrations below were executed on 27 September 2026. The screenshots show recorded execution reports. The original page captures are retained in the repository evidence archive. Separate runtime checks verified process and container settings. The Azure section is a proposed architecture, not a deployed result.
 
 **Run the examples:** the [companion GitHub repository](https://github.com/SalehElnagar/terraform-packer-docker-images) contains both implementations, the omitted-trigger experiment, a runtime verifier, and the recorded evidence.
 
@@ -178,9 +178,9 @@ curl --fail http://127.0.0.1:18080/
 
 The request returned HTTP 200 and `Image build lab: version one`. Docker readback confirmed the non-root user, read-only root filesystem, dropped capabilities, no-new-privileges, absence of mounts, and loopback-only port.
 
-![The actual Terraform-created container serves version one.](../evidence/screenshots/terraform-version-one.png)
+![Historical baseline report: HTTP 200, version one, and the recorded runtime settings.](../evidence/screenshots/terraform-baseline-report.jpg)
 
-*Actual browser capture from port 18080 after the baseline apply. A page screenshot proves the visible response; the separate runtime assertions check the settings.*
+*Screenshot of the recorded baseline report. This documents the earlier version-one run; it is not a fresh capture of the currently rebuilt container.*
 
 A saved plan identifies planned resource actions. It does not embed and freeze every external file a provider might use during apply. Keep the build context at the reviewed revision through execution.
 
@@ -198,15 +198,15 @@ terraform -chdir=terraform plan -out=article-update.tfplan
 
 The new plan changed only the `content` hash in the trigger map and proposed replacing the image and its container. Applying the reviewed update replaced both resources. Docker reported a different image ID, and HTTP returned version two.
 
-![The actual container serves version two after Terraform rebuilt the image and replaced its consumer.](../evidence/screenshots/terraform-version-two.png)
+![Rebuild report: HTTP 200, version two, and a changed image identifier.](../evidence/screenshots/terraform-rebuild-report.jpg)
 
-*Actual browser capture from the same port after the rebuild. The container was recreated; this was not an in-place edit to its filesystem.*
+*Screenshot of the recorded rebuild result. The report identifies version two and the changed image; the container was recreated.*
 
 The negative experiment used a separate baseline, state directory, resource names, and port 18082. Only the `content` trigger was omitted. After changing its HTML to version two, the plan reported no changes and HTTP still returned version one.
 
-![The separate omitted-trigger container continues serving version one.](../evidence/screenshots/no-trigger-version-one.png)
+![Omitted-trigger report: source version two, served version one, and a no-op plan.](../evidence/screenshots/omitted-trigger-report.jpg)
 
-*The source changed, but this trigger map did not describe that input. Do not remove a trigger midway through the positive experiment: changing the map is itself a configuration change.*
+*Screenshot of the recorded negative-case result. The source changed, but the trigger map did not describe that input. Removing a trigger midway through the positive experiment would itself change the map.*
 
 This is why “Terraform builds the image” is an incomplete explanation. The configuration must also express the inputs that tell Terraform when another build is needed.
 
@@ -282,9 +282,9 @@ curl --fail http://127.0.0.1:18081/
 
 The Packer container returned HTTP 200 and the version-one page captured at build time. This path does not read the Dockerfile. Editing the page requires another explicit build.
 
-![The corrected Packer-built image serves the version-one page.](../evidence/screenshots/packer-version-one.png)
+![Packer runtime report: HTTP 200, version one, explicit Python entrypoint, and verified settings.](../evidence/screenshots/packer-runtime-report.jpg)
 
-*Actual browser capture from port 18081. Ten runtime checks passed, including the complete response body and effective Python command.*
+*Screenshot of the recorded Packer result. It identifies the explicit Python entrypoint and version-one response. The separate verifier also passed all ten checks.*
 
 **A build success hid a runtime failure.** The first Packer recipe used `ENTRYPOINT []`. In this environment the committed image retained `/bin/sh`. The build succeeded, but the container exited with code 2 and `/bin/sh: can't open 'python': No such file or directory`.
 
@@ -332,9 +332,9 @@ Use the source file that was present when that image was built. The verifier com
 
 The evidence package keeps the failure as well as the passing runs. Screenshots help readers see the result; the checks explain precisely what was verified.
 
-![The committed runtime report records all ten checks passing for the Terraform container.](../evidence/screenshots/runtime-verification-report.png)
+![Complete named runtime report: all ten checks passed for the Terraform container.](../evidence/screenshots/runtime-checks-report.jpg)
 
-*Actual browser capture of the committed report generated by the runtime verifier. This is a report view, not a reconstructed terminal screenshot.*
+*Screenshot of the complete committed verification report, with the filename and every check visible. It records the earlier execution; it is not a terminal screenshot.*
 
 ## What I would ask in that code review
 

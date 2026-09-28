@@ -17,7 +17,25 @@ The JSON files contain selected, sanitized observations rather than raw Docker
 inspect output, Terraform state, plans, or build logs. Image configuration IDs
 identify local image configurations; they are not registry manifest digests.
 
-## Real browser captures
+## Screenshot audit and current article figures
+
+The original page crops below are retained as historical evidence. Their missing
+endpoint context made the version-one cases visually indistinguishable, and the
+old report crop was incomplete. They have been replaced in the article by the
+following complete report captures. These are screenshots of saved observations,
+not fresh terminal or runtime screenshots. No builds were rerun for this audit.
+
+![Complete baseline.json report.](screenshots/terraform-baseline-report.jpg)
+
+![Complete rebuild.json report.](screenshots/terraform-rebuild-report.jpg)
+
+![Complete no-trigger.json report.](screenshots/omitted-trigger-report.jpg)
+
+![Complete packer.json report.](screenshots/packer-runtime-report.jpg)
+
+![Complete terraform-runtime.json report.](screenshots/runtime-checks-report.jpg)
+
+## Archived original browser captures
 
 ### Terraform baseline
 

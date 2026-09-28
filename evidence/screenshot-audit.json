@@ -1,0 +1,58 @@
+{
+  "audited_at": "2026-09-28T03:23:36.786428+00:00",
+  "original_findings": [
+    "Four version-one page crops are byte-identical and omit the endpoint context.",
+    "The earlier report crop cuts the left-side context and is too small in the article.",
+    "Historical screenshot filenames use .png although their encoded content is JPEG."
+  ],
+  "action": "Replace the five article screenshot slots with distinct, complete report captures; preserve original captures as archival evidence.",
+  "execution": "No rebuild, apply, or runtime mutation performed for this audit.",
+  "report_revision": "83a4f8805d4f5b7836446f0c4d7d3a7185bfcbe7",
+  "replacements": [
+    {
+      "file": "terraform-baseline-report.jpg",
+      "report": "baseline.json",
+      "sha256": "776a86b0ac44ee3509df4726e3f8dafe952beadd54907e591b2749f9ca3c93a5",
+      "format": "JPEG",
+      "width": 1051,
+      "height": 688,
+      "review": "Filename, complete fields, final closing brace, and recorded timestamp inspected."
+    },
+    {
+      "file": "terraform-rebuild-report.jpg",
+      "report": "rebuild.json",
+      "sha256": "25a0e6eddc8a960e98b6daf0b58633a84533babcab6a66c091d808f313bd7b9a",
+      "format": "JPEG",
+      "width": 1051,
+      "height": 688,
+      "review": "Filename, complete fields, final closing brace, and recorded timestamp inspected."
+    },
+    {
+      "file": "omitted-trigger-report.jpg",
+      "report": "no-trigger.json",
+      "sha256": "cb920af708d078cc391909688c06781ded4f2d7115b9a6ff060fa5c0ec6d8fa8",
+      "format": "JPEG",
+      "width": 1051,
+      "height": 688,
+      "review": "Filename, complete fields, final closing brace, and recorded timestamp inspected."
+    },
+    {
+      "file": "packer-runtime-report.jpg",
+      "report": "packer.json",
+      "sha256": "706f3876a15d7912dfcef50b0970a9fe7ef4c54d3b81e757fa5f3f703b3b8305",
+      "format": "JPEG",
+      "width": 1051,
+      "height": 688,
+      "review": "Filename, complete fields, final closing brace, and recorded timestamp inspected."
+    },
+    {
+      "file": "runtime-checks-report.jpg",
+      "report": "terraform-runtime.json",
+      "sha256": "9acc26f870ead18a0ae40ce651ce976b97f3155a34c8e06dc8b2ee11cd6d6da1",
+      "format": "JPEG",
+      "width": 1051,
+      "height": 688,
+      "review": "Filename, complete fields, final closing brace, and recorded timestamp inspected."
+    }
+  ]
+}
